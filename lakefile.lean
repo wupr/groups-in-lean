@@ -6,6 +6,8 @@ package «groups-in-lean» where
 
 require mathlib from git
   "https://github.com/leanprover-community/mathlib4.git"@"v4.2.0"
+require Paperproof from git
+  "https://github.com/Paper-Proof/paperproof.git"@"main"/"lean"
 
 @[default_target]
 lean_lib «GroupsInLean» where
