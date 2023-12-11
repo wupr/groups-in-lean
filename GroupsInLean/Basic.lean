@@ -29,7 +29,7 @@ lemma comm_of_order_four [Fintype G] (h : Fintype.card G = 4) : ∀ x y : G, x *
     specialize h4 x
     suffices : orderOf x ∣ 2
     · rwa [← orderOf_dvd_two_iff_self_mul_eq_one]
-    have : orderOf x ∣ 4 := h ▸ orderOf_dvd_card_univ (x := x)
+    have : orderOf x ∣ 4 := h ▸ orderOf_dvd_card (x := x)
     rw [← pow_one 2, Nat.dvd_prime_pow Nat.prime_two]
     rw [show 4 = 2 ^ 2 by norm_num1, Nat.dvd_prime_pow Nat.prime_two] at this
     generalize orderOf x = n at *
